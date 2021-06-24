@@ -20,6 +20,10 @@ ol{
 }
 
 #Para{
-  font-size:30px;
+  font-size:50px;
+  font-weight:100px;
   letter-spacing:3px;
+}
+#but{
+    letter-spacing: 2px;
 }
