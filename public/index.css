@@ -1,0 +1,25 @@
+h1{
+    letter-spacing:7px;
+}
+
+.addimg1
+{
+    background-image: url("images/chris-liverani-rD2dc_2S3i0-unsplash.jpg");
+    background-size: 200px 100px;
+}
+
+
+ol{
+
+    list-style: none;
+}
+
+.addimg2{
+    background-image: url("images/jeshoots-com-5EKw8Z7CgE4-unsplash.jpg");
+    background-size: 300px 100px;
+}
+
+#Para{
+  font-size:30px;
+  letter-spacing:3px;
+}

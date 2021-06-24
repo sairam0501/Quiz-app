@@ -1,0 +1,111 @@
+
+ /* 
+ fetch('https://opentdb.com/api.php?amount=10&category=19&difficulty=medium&type=multiple')
+    .then((resp) => resp.json())
+    .then(function(data) {
+            //console.log(data)
+           for(r=0;r<10;r++)
+           {
+               //console.log(i)
+            let Question=data.results[r].question
+            let correct_answer=data.results[r].correct_answer
+            let incorrect_answer=data.results[r].incorrect_answers
+            let list=[]
+            list.push(correct_answer)
+            list.push(incorrect_answer[0])
+            list.push(incorrect_answer[1])
+            list.push(incorrect_answer[2])
+            list = list.sort(() => Math.random() - 0.5)
+            list.push(correct_answer)
+            list.push(Question)
+
+              console.log(list)
+             for(let j=0;j<6;j++)
+               tot[r][j]=list[j]
+           // console.log(list)
+           }
+             flag=1    
+         
+      })
+     .catch(function(error){
+         console.log(error)
+     });
+ 
+ 
+ 
+ 
+ $("li").click(function() {
+        let  id = $(this).attr('id');
+          let text=$("#"+id)
+
+          console.log(tot[i][0])
+        if(flag==0)
+        {
+            text.empty()
+          if(id=="1")
+          {
+            if(tot[i][0]==tot[i][4])
+            {
+                   total_crct++
+                   text.append(`
+                   <span class="text-center py-2 px-3 font-weight-bolder text-dark">A</span><span class="text-monospace">${tot[i][0]}</span><span><i class="fas fa-check-circle"></i></span>
+                   `)
+            }
+            else{
+                text.append(`
+                <span class="text-center py-2 px-3 font-weight-bolder text-dark">A</span><span class="text-monospace">${tot[i][0]}</span><span><i class="fas fa-times-circle"></i></span>
+                `)
+            }
+          }
+          else if(id=="2")
+          {
+            if(tot[i][1]==tot[i][4])
+            {
+               total_crct++   
+               text.append(`
+               <span class="text-center py-2 px-3 font-weight-bolder text-dark">B</span><span class="text-monospace">${tot[i][1]}</span><span><i class="fas fa-check-circle"></i></span>
+               `) 
+            }
+            else
+            {
+                text.append(`
+                <span class="text-center py-2 px-3 font-weight-bolder text-dark">B</span><span class="text-monospace">${tot[i][1]}</span><span><i class="fas fa-times-circle"></i></span>
+                `)
+            }
+          }
+          else if(id=="3")
+          {
+            if(tot[i][2]==tot[i][4])
+            {
+               total_crct++  
+               text.append(`
+               <span class="text-center py-2 px-3 font-weight-bolder text-dark">C</span><span class="text-monospace">${tot[i][2]}</span><span><i class="fas fa-check-circle"></i></span>
+               `)  
+            }
+            else
+            {
+                text.append(`
+                <span class="text-center py-2 px-3 font-weight-bolder text-dark">C</span><span class="text-monospace">${tot[i][2]}</span><span><i class="fas fa-times-circle"></i></span>
+                `)
+            }
+          }
+          else
+          {
+            if(tot[i][3]==tot[i][4])
+            {
+              total_crct++
+              text.append(`
+               <span class="text-center py-2 px-3 font-weight-bolder text-dark">D</span><span class="text-monospace">${tot[i][3]}</span><span><i class="fas fa-check-circle"></i></span>
+               `) 
+            }
+            else
+            {
+                text.append(`
+                <span class="text-center py-2 px-3 font-weight-bolder text-dark">D</span><span class="text-monospace">${tot[i][3]}</span><span><i class="fas fa-times-circle"></i></span>
+                `)
+            }
+          }
+          flag=1
+        }
+    });*/
+ 
